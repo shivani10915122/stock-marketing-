@@ -1,0 +1,17 @@
+import random
+import matplotlib.pyplot as plt
+from sklearn.linear_model import LinearRegression
+x=[[1],[2],[3],[4],[5],[6],[7],[8],[9],[10]]
+y=[[101],[102],[103],[104],[105],[106],[107],[108],[109],[110]]
+model=LinearRegression()
+model.fit(x,y)
+next_price=model.predict([[11]])
+print("the next day data is predicted",(next_price[0],2))
+predictions=model.predict(x)
+plt.scatter(x,y,color="blue",label="actual price")
+plt.plot(x,predictions,color="pink",label="Regression line")
+plt.xlabel("Day")
+plt.ylabel("Stock Price")
+plt.title("Stock Price Prediction")
+plt.legend()
+plt.show()
