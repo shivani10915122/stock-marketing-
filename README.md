@@ -1,0 +1,2 @@
+# stock-marketing-
+linear regression 
